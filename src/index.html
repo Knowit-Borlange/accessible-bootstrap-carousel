@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Demo</title>
+</head>
+
+<body>
+  <div class="container pt-3 pb-5">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <h1>Accessible Bootstrap Carousel</h1>
+          
+          <p class="mt-3 mb-1"><code>data-description-placement="over"</code></p>
+          <% var module = require('html-loader!./accessible-bootstrap-carousel.html') %>
+          <%= module.replace(/moduleId/g, 'id1').replace(/moduleDescriptionPlacement/g, 'over').replace(/moduleModal/g, 'false') %>
+
+          <p class="mt-5 mb-1"><code>data-description-placement="under", data-modal="true"</code></p>
+          <% var module2 = require('html-loader!./accessible-bootstrap-carousel.html') %>
+          <%= module2.replace(/moduleId/g, 'id2').replace(/moduleDescriptionPlacement/g, 'under').replace(/moduleModal/g, 'true') %>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

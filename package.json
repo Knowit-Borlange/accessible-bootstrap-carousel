@@ -1,0 +1,45 @@
+{
+  "name": "accessible-bootstrap-carousel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-js && npm run copy",
+    "build-js": "babel ./src/accessible-bootstrap-carousel.js -d ./dist/",
+    "copy": "copyfiles ./src/accessible-bootstrap-carousel.html ./src/accessible-bootstrap-carousel.scss ./dist/ -f",
+    "copyImages": "copyfiles ./src/images/*.jpg ./dist/images/ -f",
+    "start": "webpack-dev-server --config webpack.config.js --mode-development --open",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Knowit Experience Borlänge",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "magnific-popup": "^1.1.0",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "copyfiles": "^2.1.1",
+    "cp": "^0.2.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "file-loader": "^4.3.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^4.0.0-beta.11",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
