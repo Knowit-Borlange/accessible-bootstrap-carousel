@@ -93,7 +93,7 @@ $carousel-fontawesome-4: false !default;
       @if $carousel-fontawesome-4 {
         @include fa-icon();
         content: $fa-var-pause;
-      } else {
+      } @else {
         @extend .fa;
         content: fa-content($fa-var-pause);
       }
@@ -101,7 +101,7 @@ $carousel-fontawesome-4: false !default;
     &.paused::before {
       @if $carousel-fontawesome-4 {
         content: $fa-var-play;
-      } else {
+      } @else {
         content: fa-content($fa-var-play);
       }
     }
@@ -114,7 +114,7 @@ $carousel-fontawesome-4: false !default;
       @if $carousel-fontawesome-4 {
         @include fa-icon();
         content: $fa-var-eye-slash;
-      } else {
+      } @else {
         @extend .fa;
         content: fa-content($fa-var-eye-slash);
       }
@@ -123,7 +123,7 @@ $carousel-fontawesome-4: false !default;
       @if $carousel-fontawesome-4 {
         @include fa-icon();
         content: $fa-var-eye;        
-      } else {
+      } @else {
         @extend .fa;
         content: fa-content($fa-var-eye);
       }
@@ -198,11 +198,11 @@ $carousel-fontawesome-4: false !default;
     justify-content: center;
     background: rgba($black, 0.7);
 
-    &::before {
+    &::before {      
       @if $carousel-fontawesome-4 {
         @include fa-icon();
         content: $fa-var-angle-left;
-      } else {
+      } @else {
         @extend .fa;
         content: fa-content($fa-var-angle-left);
       }
@@ -213,7 +213,7 @@ $carousel-fontawesome-4: false !default;
     @if $carousel-fontawesome-4 {
       @include fa-icon();
       content: $fa-var-angle-right;
-    } else {
+    } @else {
       @extend .fa;
       content: fa-content($fa-var-angle-right);
     }

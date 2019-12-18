@@ -90,17 +90,18 @@ $carousel-fontawesome-4: false !default;
     margin-right: auto;
 
     &::before {
-      @extend .fa;
       @if $carousel-fontawesome-4 {
+        @include fa-icon();
         content: $fa-var-pause;
-      } else {
+      } @else {
+        @extend .fa;
         content: fa-content($fa-var-pause);
       }
     }
     &.paused::before {
       @if $carousel-fontawesome-4 {
         content: $fa-var-play;
-      } else {
+      } @else {
         content: fa-content($fa-var-play);
       }
     }
@@ -110,18 +111,21 @@ $carousel-fontawesome-4: false !default;
     margin-left: auto;
 
     &::before {
-      @extend .fa;
       @if $carousel-fontawesome-4 {
+        @include fa-icon();
         content: $fa-var-eye-slash;
-      } else {
+      } @else {
+        @extend .fa;
         content: fa-content($fa-var-eye-slash);
       }
     }
     &.hidden::before {
       @if $carousel-fontawesome-4 {
+        @include fa-icon();
+        content: $fa-var-eye;        
+      } @else {
+        @extend .fa;
         content: fa-content($fa-var-eye);
-      } else {
-        content: $fa-var-eye;
       }
     }
   }
@@ -163,12 +167,6 @@ $carousel-fontawesome-4: false !default;
         width: auto;
         height: auto;
       }
-  
-      // @for $i from 1 through 9 {
-      //   &:nth-child(#{$i})::before {
-      //     content: "#{$i}";
-      //   }
-      // }
     }
   }
 }
@@ -200,11 +198,12 @@ $carousel-fontawesome-4: false !default;
     justify-content: center;
     background: rgba($black, 0.7);
 
-    &::before {
-      @extend .fa;
+    &::before {      
       @if $carousel-fontawesome-4 {
+        @include fa-icon();
         content: $fa-var-angle-left;
-      } else {
+      } @else {
+        @extend .fa;
         content: fa-content($fa-var-angle-left);
       }
       
@@ -212,8 +211,10 @@ $carousel-fontawesome-4: false !default;
   }
   .carousel-control-next-icon::before {
     @if $carousel-fontawesome-4 {
+      @include fa-icon();
       content: $fa-var-angle-right;
-    } else {
+    } @else {
+      @extend .fa;
       content: fa-content($fa-var-angle-right);
     }
     
