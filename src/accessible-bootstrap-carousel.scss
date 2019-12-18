@@ -90,10 +90,11 @@ $carousel-fontawesome-4: false !default;
     margin-right: auto;
 
     &::before {
-      @extend .fa;
       @if $carousel-fontawesome-4 {
+        @include fa-icon();
         content: $fa-var-pause;
       } else {
+        @extend .fa;
         content: fa-content($fa-var-pause);
       }
     }
@@ -110,18 +111,21 @@ $carousel-fontawesome-4: false !default;
     margin-left: auto;
 
     &::before {
-      @extend .fa;
       @if $carousel-fontawesome-4 {
+        @include fa-icon();
         content: $fa-var-eye-slash;
       } else {
+        @extend .fa;
         content: fa-content($fa-var-eye-slash);
       }
     }
     &.hidden::before {
       @if $carousel-fontawesome-4 {
-        content: fa-content($fa-var-eye);
+        @include fa-icon();
+        content: $fa-var-eye;        
       } else {
-        content: $fa-var-eye;
+        @extend .fa;
+        content: fa-content($fa-var-eye);
       }
     }
   }
@@ -195,10 +199,11 @@ $carousel-fontawesome-4: false !default;
     background: rgba($black, 0.7);
 
     &::before {
-      @extend .fa;
       @if $carousel-fontawesome-4 {
+        @include fa-icon();
         content: $fa-var-angle-left;
       } else {
+        @extend .fa;
         content: fa-content($fa-var-angle-left);
       }
       
@@ -206,8 +211,10 @@ $carousel-fontawesome-4: false !default;
   }
   .carousel-control-next-icon::before {
     @if $carousel-fontawesome-4 {
+      @include fa-icon();
       content: $fa-var-angle-right;
     } else {
+      @extend .fa;
       content: fa-content($fa-var-angle-right);
     }
     
