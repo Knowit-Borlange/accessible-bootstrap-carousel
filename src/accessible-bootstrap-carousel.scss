@@ -163,12 +163,6 @@ $carousel-fontawesome-4: false !default;
         width: auto;
         height: auto;
       }
-  
-      // @for $i from 1 through 9 {
-      //   &:nth-child(#{$i})::before {
-      //     content: "#{$i}";
-      //   }
-      // }
     }
   }
 }
