@@ -1,3 +1,5 @@
+$carousel-fontawesome-4: false !default;
+
 .carousel-player {
   position: relative;
 }
@@ -89,10 +91,18 @@
 
     &::before {
       @extend .fa;
-      content: fa-content($fa-var-pause);
+      @if $carousel-fontawesome-4 {
+        content: $fa-var-pause;
+      } else {
+        content: fa-content($fa-var-pause);
+      }
     }
     &.paused::before {
-      content: fa-content($fa-var-play);
+      @if $carousel-fontawesome-4 {
+        content: $fa-var-play;
+      } else {
+        content: fa-content($fa-var-play);
+      }
     }
   }
 
@@ -101,10 +111,18 @@
 
     &::before {
       @extend .fa;
-      content: fa-content($fa-var-eye-slash);
+      @if $carousel-fontawesome-4 {
+        content: $fa-var-eye-slash;
+      } else {
+        content: fa-content($fa-var-eye-slash);
+      }
     }
     &.hidden::before {
-      content: fa-content($fa-var-eye);
+      @if $carousel-fontawesome-4 {
+        content: fa-content($fa-var-eye);
+      } else {
+        content: $fa-var-eye;
+      }
     }
   }
 
@@ -184,10 +202,20 @@
 
     &::before {
       @extend .fa;
-      content: fa-content($fa-var-angle-left);
+      @if $carousel-fontawesome-4 {
+        content: $fa-var-angle-left;
+      } else {
+        content: fa-content($fa-var-angle-left);
+      }
+      
     }
   }
   .carousel-control-next-icon::before {
-    content: fa-content($fa-var-angle-right);
+    @if $carousel-fontawesome-4 {
+      content: $fa-var-angle-right;
+    } else {
+      content: fa-content($fa-var-angle-right);
+    }
+    
   }
 }
