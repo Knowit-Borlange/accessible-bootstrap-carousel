@@ -21,6 +21,10 @@
           <p class="mt-5 mb-1"><code>data-description-placement="under", data-modal="true"</code></p>
           <% var module2 = require('html-loader!./accessible-bootstrap-carousel.html') %>
           <%= module2.replace(/moduleId/g, 'id2').replace(/moduleDescriptionPlacement/g, 'under').replace(/moduleModal/g, 'true') %>
+
+          <p class="mt-5 mb-1"><code>class="accessible-carousel--compact-controls"</code></p>
+          <% var module3 = require('html-loader!./accessible-bootstrap-carousel.html') %>
+          <%= module3.replace(/moduleClass/g, 'accessible-carousel--compact-controls') %>
       </div>
     </div>
   </div>
