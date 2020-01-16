@@ -1,3 +1,8 @@
+/*
+* @preserve This version of accessible-bootstrap-carousel includes a bundled version of "magnific-popup"
+* NOTE! You are required to include boostrap and jQuery yourself.
+*/
+
 (function ($) {
     'use strict';
 
@@ -1908,8 +1913,6 @@
      _checkInstance(); }));
     });
 
-    // require('magnific-popup');
-
     const $accesibleCarousels$1 = $('.accessible-carousel');
 
     function initCarouselPopupLayout() {
@@ -2064,8 +2067,6 @@
             });
         });
     };
-
-
 
     // INIT
     $(function () {
