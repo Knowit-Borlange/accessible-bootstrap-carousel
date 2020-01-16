@@ -1,8 +1,6 @@
 import $ from 'jquery';
 import magnificPopup from 'magnific-popup';
 
-// require('magnific-popup');
-
 const $accesibleCarousels = $('.accessible-carousel');
 
 function initCarouselPopupLayout() {
