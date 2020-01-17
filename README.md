@@ -1,4 +1,6 @@
 ## accessible-bootstrap-carousel
+A modified version of Bootstrap Carousel that a aims to follow WAI guidelines.
+[W3C WAI Carousels](https://www.w3.org/WAI/tutorials/carousels/)
 
 ## Quick start
 
