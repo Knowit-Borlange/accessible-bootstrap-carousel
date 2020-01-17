@@ -28,3 +28,6 @@ A bundled version that that includes [magnific-popup](https://dimsemenov.com/plu
 
 ## Markup
 [Example](src/accessible-bootstrap-carousel.html)
+
+## Status
+![npm version](https://flat.badgen.net/npm/dt/accessible-bootstrap-carousel)
