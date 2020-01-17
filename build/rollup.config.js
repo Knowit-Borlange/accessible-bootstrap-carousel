@@ -2,7 +2,7 @@
 
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('@rollup/plugin-node-resolve')
-// const terser = require('rollup-plugin-terser')
+
 import { terser } from "rollup-plugin-terser";
 
 
@@ -45,7 +45,8 @@ const rollupConfig = {
     plugins :  [
         commonjs(),
         // Find node modules to include in bundle
-        nodeResolve()    ]
+        nodeResolve()    
+    ]
 }
 
 module.exports = rollupConfig
