@@ -2,6 +2,9 @@
 A modified version of Bootstrap Carousel that a aims to follow WAI guidelines.
 [W3C WAI Carousels](https://www.w3.org/WAI/tutorials/carousels/)
 
+![npm version](https://flat.badgen.net/npm/v/accessible-bootstrap-carousel)
+![npm downloads](https://flat.badgen.net/npm/dt/accessible-bootstrap-carousel)
+
 ## Quick start
 
 Several quick start options are available:
@@ -31,6 +34,11 @@ A bundled version that includes [magnific-popup](https://dimsemenov.com/plugins/
 ## Markup
 [Example](src/accessible-bootstrap-carousel.html)
 
-## Status
-![npm version](https://flat.badgen.net/npm/v/accessible-bootstrap-carousel)
-![npm downloads](https://flat.badgen.net/npm/dt/accessible-bootstrap-carousel)
+## Demo
+```javascript
+git clone https://github.com/Knowit-Borlange/accessible-bootstrap-carousel.git
+
+npm install accessible-bootstrap-carousel
+
+npm run start
+```
