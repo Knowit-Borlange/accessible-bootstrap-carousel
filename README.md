@@ -16,7 +16,7 @@ import 'accessible-bootstrap-carousel';
 ```
 
 ### Bundled version
-A bundled version that that includes [magnific-popup](https://dimsemenov.com/plugins/magnific-popup/)
+A bundled version that includes [magnific-popup](https://dimsemenov.com/plugins/magnific-popup/)
 
 ```html
 <!-- NOTE! You are required to load jQuery and Bootstrap dependencies yourself. I.e. via a CDN -->
@@ -30,4 +30,5 @@ A bundled version that that includes [magnific-popup](https://dimsemenov.com/plu
 [Example](src/accessible-bootstrap-carousel.html)
 
 ## Status
-![npm version](https://flat.badgen.net/npm/dt/accessible-bootstrap-carousel)
+![npm version](https://flat.badgen.net/npm/v/accessible-bootstrap-carousel)
+![npm downloads](https://flat.badgen.net/npm/dt/accessible-bootstrap-carousel)
