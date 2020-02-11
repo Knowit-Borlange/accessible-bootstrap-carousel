@@ -1,5 +1,5 @@
 'use strict'
-
+const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('@rollup/plugin-node-resolve')
 
@@ -45,7 +45,8 @@ const rollupConfig = {
     plugins :  [
         commonjs(),
         // Find node modules to include in bundle
-        nodeResolve()    
+        nodeResolve(),
+        babel() 
     ]
 }
 
