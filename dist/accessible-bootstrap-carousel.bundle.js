@@ -1859,8 +1859,9 @@
           titleSrc: function titleSrc(item) {
             var el = $(item.el);
 
-            if (el.data('useCaption') !== undefined && el.data('useCaption')) {
-              return el.closest('.carousel-item').find('.carousel-caption').html();
+            if (el.data('modalTextTarget') !== undefined) {
+              var target = $(el.data('modalTextTarget'));
+              return target.html();
             }
 
             return item.el.attr('title');

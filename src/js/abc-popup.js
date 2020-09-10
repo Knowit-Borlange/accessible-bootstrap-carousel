@@ -48,8 +48,9 @@ function openCarouselPopup(el) {
             tError: '<a href="%url%">Bilden #%curr%</a> kunde inte laddas.',
             titleSrc: function (item) {
                 const el = $(item.el);
-                if(el.data('useCaption') !== undefined && el.data('useCaption')) {
-                       return el.closest('.carousel-item').find('.carousel-caption').html();    
+                if(el.data('modalTextTarget') !== undefined) {
+                      const target = $(el.data('modalTextTarget'));
+                       return target.html();    
                 }
                 return item.el.attr('title');
             }
