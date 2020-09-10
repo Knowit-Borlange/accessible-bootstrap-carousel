@@ -6,7 +6,7 @@
 (function ($) {
     'use strict';
 
-    $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+    $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
 
     var $accesibleCarousels = $('.accessible-carousel');
 
@@ -1857,11 +1857,17 @@
         image: {
           tError: '<a href="%url%">Bilden #%curr%</a> kunde inte laddas.',
           titleSrc: function titleSrc(item) {
+            var el = $(item.el);
+
+            if (el.data('useCaption') !== undefined && el.data('useCaption')) {
+              return el.closest('.carousel-item').find('.carousel-caption').html();
+            }
+
             return item.el.attr('title');
           }
         },
         tLoading: $this.data('loading-text') + ' #%curr%...',
-        tClose: '@Html.Translate("/carousel/close") (Esc)',
+        tClose: $this.data('close-text') + ' (Esc)',
         closeMarkup: '<button title="%title%" type="button" class="mfp-close">' + $this.data('close-text') + '<span class="fa fa-times-circle"></span></button>'
       });
     }
