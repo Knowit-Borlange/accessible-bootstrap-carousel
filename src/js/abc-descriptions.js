@@ -9,18 +9,25 @@ function initDescriptionPlacement () {
         let $descriptionsWrapper = $this.find('.carousel-descriptions');
         let $descriptionItem = $this.find('.carousel-caption');
         
-        if(descriptionPlacement != "under" || descriptionPlacement == null) {
-            // console.log("Over");
+        if(descriptionPlacement == null){
             $descriptionsWrapper.remove();
-        } else {
-            // console.log("Under");
-            $descriptionItem.each(function (index, value) {
-                let $el = '<li class="carousel-descriptions__item">' + $(this).html() +'</li>';
-                $descriptionsWrapper.append($el);
-                $(this).remove();
-            });
-            $descriptionsWrapper.find('.carousel-descriptions__item:first-child').show();
         }
+        
+        if(descriptionPlacement !== 'hidden') {
+            if(descriptionPlacement != "under") {
+                // console.log("Over");
+                $descriptionsWrapper.remove();
+            } else {
+                // console.log("Under");
+                $descriptionItem.each(function (index, value) {
+                    let $el = '<li class="carousel-descriptions__item">' + $(this).html() +'</li>';
+                    $descriptionsWrapper.append($el);
+                    $(this).remove();
+                });
+                $descriptionsWrapper.find('.carousel-descriptions__item:first-child').show();
+            }
+        }
+
     });
     
     calculateDescriptionHeight();
