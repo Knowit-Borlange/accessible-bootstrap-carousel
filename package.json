@@ -1,6 +1,6 @@
 {
   "name": "accessible-bootstrap-carousel",
-  "version": "2.9.1",
+  "version": "2.9.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -49,5 +49,8 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
